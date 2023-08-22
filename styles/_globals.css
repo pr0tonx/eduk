@@ -1,0 +1,35 @@
+@import '_variables.css';
+@import '_header.css';
+
+*, html {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-jc-c {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-ai-c {
+    display: flex;
+    align-items: center;
+}
+
+.flex-jc-c-ai-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-jc-sb-ai-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
