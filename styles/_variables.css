@@ -1,0 +1,18 @@
+:root {
+    /* Colors */
+    --blueish-purple: #3A2ADE;
+    --purple: #6356E5;
+    --light-purple: #8C82EC;
+    --white: #FFFFFF;
+    --greyish-white: #F3F6F6;
+    --light-grey: #D6E0E0;
+    --black: #000000;
+
+    /* Font Sizes */
+    --font-small: 0.875rem; /* 14px */
+    --font-normal: 1rem; /* 16px */
+    --font-med: 1.125rem; /* 18px */
+    --font-lg: 1.25rem; /* 20px */
+    --font-xlg: 3.25rem; /* 52px */
+}
+
