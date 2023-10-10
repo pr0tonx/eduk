@@ -1,34 +1,43 @@
 header {
-    /*position: relative;*/
-    /*background-color: white;*/
-    /*color: black;*/
-    /*margin: 1.125rem 1.875rem;*/
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
     padding: 0.5rem 1.125rem;
-    /*border-radius: 0.5rem;*/
-    background-color: #000000;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.header-btn {
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-size: var(--font-lg);
-    margin: 0 2.75rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-.header-btn:last-child {
-    margin: 0 2rem;
+.logo {
+    padding: 0.5rem;
 }
 
 .header-btn a {
-    /*color: black;*/
+    font-family: Heebo, sans-serif;
+    font-weight: 500;
+    font-size: var(--font-med);
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
     text-decoration: none;
-    color: white;
 }
 
-.header-btn:hover {
-    /*background-color: rgba(0, 0, 0, 10%);*/
+.header-btn.scroll-btn a {
+    color: var(--black);
+}
+
+.header-btn.scroll-btn a:hover {
+    background-color: rgba(0, 0, 0, 0.10);
     border-radius: 0.5rem;
 }
 
+.header-btn.login-btn a {
+    color: white;
+    background-color: var(--light-purple);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.header-btn.login-btn a:hover {
+    color: black;
+    background-color: rgba(140, 130, 236, 0.8);
+    box-shadow: none;
+}

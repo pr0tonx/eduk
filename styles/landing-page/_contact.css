@@ -1,0 +1,38 @@
+.contact-section {
+    margin: 0 0 3rem 0;
+}
+
+.title span {
+    color: #000000B3;
+    font-family: Montserrat, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 0 2.5rem 0;
+}
+
+.contact__card {
+    width: 12rem;
+    flex-direction: column;
+    background-color: var(--greyish-white);
+    border-radius: 0.5rem;
+    padding: 3rem;
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.contact__card--image {
+    transform: scale(2.5);
+    margin: 0 0 1rem 0;
+}
+
+.contact__card--title {
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    margin: 1.5rem 0 1.5rem 0;
+    text-transform: uppercase;
+}
+
+.contact__card--description {
+    font-family: sans-serif, sans-serif;
+}
