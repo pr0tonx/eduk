@@ -1,0 +1,16 @@
+footer {
+    color: var(--white);
+    font-family: Montserrat, sans-serif;
+    background-color: #000000;
+    padding: 1.5rem;
+}
+
+.social-media a {
+    color: var(--white);
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+.social-media a:hover {
+    opacity: 0.8;
+}

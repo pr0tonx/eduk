@@ -1,0 +1,42 @@
+.benefits-section {
+    margin: 0 0 3rem 0;
+}
+
+.benefit {
+    margin: 5rem 0;
+}
+
+.benefit__text {
+    color: var(--white);
+    font-family: Rubik, sans-serif;
+}
+
+.benefit__text span {
+    color: #000000B3;
+    font-size: 3.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 4rem;
+}
+
+.benefit__text p {
+    font-size: 1.75rem;
+}
+
+/*FIXME achar outro jeito separar os dois ao meio e ainda ficar bonito sem o width 100% (tentar grid talvez)*/
+.benefit__image {
+    width: 100%;
+    height: 24rem;
+}
+
+.benefit__image-1 {
+    background: url(../../assets/benefit-1.svg) no-repeat;
+}
+
+.benefit__image-2 {
+    background: url(../../assets/benefit-2.svg) no-repeat;
+}
+
+.margin-left {
+    margin-left: 6rem;
+}
