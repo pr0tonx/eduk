@@ -1,8 +1,10 @@
 @import '_variables.css';
 @import '_header.css';
+@import 'landing-page/_landing-page-main.css';
 @import 'landing-page/_hero.css';
 @import 'landing-page/_benefits.css';
 @import 'landing-page/_resourses.css';
+@import 'landing-page/_testimonials.css';
 @import 'landing-page/_contact.css';
 @import '_footer.css';
 
@@ -10,15 +12,6 @@
     padding: 0;
     margin: 0;
     outline: none;
-    /*scroll-behavior: smooth; */
-}
-
-.main-container {
-    background: linear-gradient(#F5F7F6 -35%, #3525D5 195%); /* FIXME */
-}
-
-.landing-page__container {
-    padding: 0 12rem;
 }
 
 .flex {

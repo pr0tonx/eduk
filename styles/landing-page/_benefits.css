@@ -1,9 +1,13 @@
 .benefits-section {
-    margin: 0 0 3rem 0;
+    padding: 5rem 12rem 0 12rem;
 }
 
 .benefit {
-    margin: 5rem 0;
+    margin: 0 0 5rem 0;
+}
+
+.benefit:last-child {
+    margin: 0;
 }
 
 .benefit__text {
@@ -23,20 +27,146 @@
     font-size: 1.75rem;
 }
 
-/*FIXME achar outro jeito separar os dois ao meio e ainda ficar bonito sem o width 100% (tentar grid talvez)*/
-.benefit__image {
-    width: 100%;
-    height: 24rem;
-}
-
-.benefit__image-1 {
-    background: url(../../assets/benefit-1.svg) no-repeat;
-}
-
-.benefit__image-2 {
-    background: url(../../assets/benefit-2.svg) no-repeat;
+.margin-right {
+    margin: 0 4rem 0 0;
 }
 
 .margin-left {
-    margin-left: 6rem;
+    margin: 0 0 0 4rem;
 }
+
+/* START GEARS STYLE*/
+.gears {
+    display: inline-block;
+}
+
+.gears-container {
+    width: 9.375rem;
+    position: relative;
+    font-size: 1.5em;
+    padding: 2rem;
+    margin: 1rem auto;
+}
+
+.gear-rotate-clockwise {
+    width: 2em;
+    height: 2em;
+    top: 50%;
+    left: 50%;
+    margin-top: -1em;
+    margin-left: -1em;
+    background: var(--purple);
+    position: absolute;
+    border-radius: 1em;
+    -webkit-animation: 1s gear-rotate-clockwise linear infinite;
+    -moz-animation: 1s gear-rotate-clockwise linear infinite;
+    animation: 1s gear-rotate-clockwise linear infinite;
+}
+
+.gear-rotate-anticlockwise {
+    margin-top: -2.2em;
+    top: 50%;
+    width: 2em;
+    height: 2em;
+    background: var(--purple);
+    position: absolute;
+    border-radius: 1em;
+    -webkit-animation: 1s gear-rotate-anticlockwise linear infinite;
+    -moz-animation: 1s gear-rotate-anticlockwise linear infinite;
+    animation: 1s gear-rotate-anticlockwise linear infinite;
+}
+
+.gear-rotate-clockwise::before, .gear-rotate-anticlockwise::before {
+    width: 2.8em;
+    height: 2.8em;
+    background: -webkit-linear-gradient(0deg, transparent 39%, var(--purple) 39%, var(--purple) 61%, transparent 61%),
+    -webkit-linear-gradient(60deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%),
+    -webkit-linear-gradient(120deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%);
+    background: -moz-linear-gradient(0deg, transparent 39%, var(--purple) 39%, var(--purple) 61%, transparent 61%),
+    -moz-linear-gradient(60deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%),
+    -moz-linear-gradient(120deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%);
+    background: -o-linear-gradient(0deg, transparent 39%, var(--purple) 39%, var(--purple) 61%, transparent 61%),
+    -o-linear-gradient(60deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%),
+    -o-linear-gradient(120deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%);
+    background: -ms-linear-gradient(0deg, transparent 39%, var(--purple) 39%, var(--purple) 61%, transparent 61%),
+    -ms-linear-gradient(60deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%),
+    -ms-linear-gradient(120deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%);
+    background: linear-gradient(0deg, transparent 39%, var(--purple) 39%, var(--purple) 61%, transparent 61%),
+    linear-gradient(60deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%),
+    linear-gradient(120deg, transparent 42%, var(--purple) 42%, var(--purple) 58%, transparent 58%);
+    position: absolute;
+    content: '';
+    top: -.4em;
+    left: -.4em;
+    border-radius: 1.4em;
+}
+
+.gear-rotate-clockwise::after, .gear-rotate-anticlockwise::after {
+    width: 1em;
+    height: 1em;
+    background: #000000B3;
+    position: absolute;
+    content: "";
+    top: .5em;
+    left: .5em;
+    border-radius: .5em;
+}
+
+/*
+ * Keyframe Animations
+ */
+
+@-webkit-keyframes gear-rotate-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@-moz-keyframes gear-rotate-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes gear-rotate-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@-webkit-keyframes gear-rotate-anticlockwise {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(210deg);
+    }
+}
+
+@-moz-keyframes gear-rotate-anticlockwise {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(210deg);
+    }
+}
+
+@keyframes gear-rotate-anticlockwise {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(210deg);
+    }
+}
+/* END GEARS STYLE*/

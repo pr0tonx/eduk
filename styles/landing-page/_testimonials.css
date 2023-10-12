@@ -1,0 +1,61 @@
+.testimonials-section {
+    padding: 0 12rem;
+    margin: 0 0 6rem 0;
+}
+
+.testimonial__cards {
+    display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+
+}
+
+.testimonial__card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 35%;
+    padding: 2rem 3rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.25);
+    scroll-snap-align: start;
+    transition: 0.2s;
+}
+
+.testimonial__card:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.testimonial__card:hover {
+    color: black;
+    background-color: var(--greyish-white);
+}
+
+.card__title {
+    font-family: Montserrat, sans-serif;
+    font-size: var(--font-med);
+    font-weight: 700;
+    margin: 0 0.5rem;
+}
+
+.card__content {
+    font-family: Montserrat, sans-serif;
+    margin: 1.25rem 0;
+    max-width: 85%;
+}
+
+.testimonial__cards::-webkit-scrollbar {
+    height: 0.75rem;
+}
+
+.testimonial__cards::-webkit-scrollbar-thumb:horizontal {
+    background-color: #000000B3;
+    border-radius: 0.25rem;
+}
+.testimonial__cards::-webkit-scrollbar-track {
+    background: var(--greyish-white);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.15);
+}
