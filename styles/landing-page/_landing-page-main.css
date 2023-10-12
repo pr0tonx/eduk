@@ -1,0 +1,8 @@
+*, html {
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    background: linear-gradient(#F5F7F6 -35%, #3525D5 195%); /* FIXME */
+    /*background: linear-gradient(0deg, #3525D5 -3.88%, #F5F7F6 148.1%);*/
+}

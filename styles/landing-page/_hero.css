@@ -1,12 +1,10 @@
-.hero {
-    background-color: black;
-    margin: 6rem;
-}
-
-.hero__image {
-
-}
-
-.hero__text {
-
+.hero-section {
+    /*TODO desenhar background parecido*/
+    background: url(../../assets/hero-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 93vh;
+    flex-direction: column;
 }
