@@ -1,12 +1,4 @@
-INSERT INTO TBPessoa (
-        nome,
-        sobrenome,
-        data_nascimento,
-        cpf,
-        rg,
-        sexo,
-        nacionalidade
-    )
+INSERT INTO TBPessoa 
 VALUES (
         'John',
         'Doe',
@@ -16,16 +8,9 @@ VALUES (
         'masculino',
         'Brasil'
     );
-INSERT INTO TBResponsavel (vinculo, fk_pessoa_id)
+INSERT INTO TBResponsavel 
 VALUES ('Parent', 1);
-INSERT INTO TBEscola (
-        cnpj,
-        nome,
-        data_ingresso,
-        assinatura,
-        email,
-        fk_endereco_id
-    )
+INSERT INTO TBEscola 
 VALUES (
         '12345678901234',
         'Escola teste',
@@ -34,21 +19,11 @@ VALUES (
         'escola@teste.com',
         1
     );
-INSERT INTO TBDisciplina (nome, fk_ementa_id, fk_docente_id)
+INSERT INTO TBDisciplina 
 VALUES ('Math', 1, 1);
-INSERT INTO TBEmenta (fk_disciplina_codigo)
+INSERT INTO TBEmenta 
 VALUES (1);
-INSERT INTO TBEndereco_Pessoa (
-        rua,
-        numero,
-        complemento,
-        cep,
-        bairro,
-        cidade,
-        estado,
-        pais,
-        fk_pessoa_id
-    )
+INSERT INTO TBEndereco_Pessoa 
 VALUES (
         'Avenida das torres',
         '456',
@@ -60,18 +35,7 @@ VALUES (
         'Brasil',
         1
     );
-INSERT INTO TBEndereco_Escola (
-        rua,
-        numero,
-        complemento,
-        cep,
-        bairro,
-        cidade,
-        estado,
-        pais,
-        fk_pessoa_cnpj,
-        fk_endereco_id
-    )
+INSERT INTO TBEndereco_Escola 
 VALUES (
         'Almirante Alexandrino',
         '789',
@@ -84,33 +48,28 @@ VALUES (
         '12345678901234',
         2
     );
-INSERT INTO TBTelefone (numero, tipo, fk_pessoa_id)
+INSERT INTO TBTelefone 
 VALUES ('1234567890', 'residencial', 1);
-INSERT INTO TBDiscente (fk_pessoa_id, fk_responsavel_id)
+INSERT INTO TBDiscente
 VALUES (1, 1);
-INSERT INTO TBRel_Frequencia (
-        fk_discente_mat,
-        fk_disciplina_codigo,
-        data_aula,
-        presenca
-    )
+INSERT INTO TBRel_Frequencia 
 VALUES (1, 1, '2023-10-15 09:00:00', 1);
-INSERT INTO TBAvaliacao (date_avaliacao, peso, fk_disciplina_codigo)
+INSERT INTO TBAvaliacao 
 VALUES ('2023-10-20 14:00:00', 10.0, 1);
-INSERT INTO TBNotas (nota, fk_discente_mat, fk_avaliacao_id)
+INSERT INTO TBNotas 
 VALUES (8.5, 1, 1);
-INSERT INTO TBDocente (salario, fk_pessoa_id, fk_disciplina_codigo)
+INSERT INTO TBDocente 
 VALUES (5000.00, 1, 1);
-INSERT INTO TBObservacao (data_ocorrido, ocorrido, fk_discente_matricula)
+INSERT INTO TBObservacao 
 VALUES ('2023-10-15 13:45:00', 'Interrompeu a aula', 1);
-INSERT INTO TBAula (data_aula, duracao, conteudo, fk_ementa_id)
+INSERT INTO TBAula 
 VALUES (
         '2023-10-15 09:00:00',
         '1 hora',
         'Introdução à Algoritimos',
         1
     );
-INSERT INTO TBConteudo (duracao, bibliografia, topico, fk_ementa_id)
+INSERT INTO TBConteudo 
 VALUES (
         '30 minutes',
         'Questionário',
