@@ -38,14 +38,3 @@
 * [ ] Formulação do DER do banco de dados;
 * [ ] Tradução do modelo DER para criação do banco em MYSQL
 * [ ] Inserção de dados de teste para funcionalidades iniciais no DB
-
-<h2> Escopo do projeto
-
-
-<h2> Escopo do projeto
-
-
-<h2> Escopo do projeto
-
-
-<h2> Escopo do projeto
