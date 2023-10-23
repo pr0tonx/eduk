@@ -7,12 +7,12 @@ footer {
 }
 
 .social-media {
-    font-size: 25px;
+    font-size: 1.563rem;
 }
 
 .social-media a {
     color: var(--black);
-    margin: 0 10px;
+    margin: 0 0.625rem;
 
 }
 
