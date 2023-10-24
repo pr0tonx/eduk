@@ -20,3 +20,7 @@ footer {
     opacity: 0.8;
     color: var(--purple);
 }
+
+.copyright{
+    padding-top: 0.7815rem;
+}
