@@ -23,6 +23,7 @@
 
 .contact__card--image {
     transform: scale(2.5);
+    color: #000000B3;
     margin: 0 0 1rem 0;
 }
 
