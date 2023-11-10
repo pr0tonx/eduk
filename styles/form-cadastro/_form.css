@@ -1,0 +1,91 @@
+body {
+    background-image: url("../../assets/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: lightgray;
+    content: attr(placeholder);
+
+}
+
+
+.form_container h2 {
+    color: var(--light-purple);
+    border-bottom: 0.063rem var(--purple) solid;
+    margin-bottom: 0.938rem;
+    padding-bottom: 0.625rem;
+    width: fit-content;
+    text-align: center;
+}
+
+
+.form {
+    min-width: 43.75rem;
+}
+
+.form_input {
+    font-size: var(--font-normal);
+    padding: 0.5rem 0.938rem;
+    border-radius: 0.25rem;
+    border: 0.063rem #f2f2f2 solid;
+    background: #fdfdfd;
+    outline: none;
+    width: 100%;
+    transition: all 0.3s;
+
+}
+
+.form_container {
+    font-family: Heebo, sans-serif;
+    margin-top: 0.625rem;
+    flex-direction: column;
+    width: 56.25rem;
+    margin: auto;
+    background: var(--white);
+    border-radius: 0.188rem;
+    padding: 2rem;
+    padding-bottom: 6rem; /* Adicione este valor para garantir espaço para o footer */
+    height: 100%;
+    box-sizing: border-box; /* Evita que o padding afete a altura total */
+}
+
+.form_field {
+    flex-direction: column;
+    max-width: fit-content;
+    min-width: 28.125rem;
+    margin: 0 auto;
+    margin-bottom: 0.750rem;
+    position: relative;
+    padding-top: 0.188rem;
+}
+
+.form_label {
+    float: left;
+    width: 100%;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.submit_button {
+    font-size: var(--font-normal);
+    background-color:var(--white);
+    color: var(--light-purple);
+    border: 0.125rem solid var(--light-purple);
+    padding: 0.625rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit_button:hover {
+    opacity: 0.8;
+    background-color:var(--light-purple);
+    color: var(--white);
+
+    
+}

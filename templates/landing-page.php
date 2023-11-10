@@ -243,17 +243,17 @@
 
 
 <!--    START FOOTER SECTION-->
-<footer>
-    <div class="social-media flex-jc-c-ai-c">
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-
-    <p class="copyright">&copy; 2023 Eduk</p>
-
-</footer>
+<footer class=" flex-jc-c-ai-c">
+        <div class="social-media flex-jc-c-ai-c">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div>
+            <p class="copyright">&copy; 2023 Eduk</p>
+        </div>
+    </footer>
 <!--   END FOOTER SECTION-->
 </body>
 
