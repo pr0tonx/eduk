@@ -19,6 +19,7 @@ footer {
 .social-media a {
     color: var(--black);
     margin: 0 0.625rem;
+
 }
 
 .social-media a:hover {
@@ -26,6 +27,6 @@ footer {
     color: var(--purple);
 }
 
-.copyright {
+.copyright{
     padding-top: 0.813rem;
 }
