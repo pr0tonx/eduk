@@ -4,41 +4,43 @@ header {
     background-color: var(--white);
     padding: 0.5rem 1.125rem;
     box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.15);
-    /*height: 8vh;*/
-    z-index: 5;
+    z-index: 1;
 }
 
 .logo {
     padding: 0.5rem;
 }
 
-.header-btn a {
+.btns-container {
+    position: relative;
+}
+
+.header-btn {
     font-family: Heebo, sans-serif;
     font-weight: 500;
     font-size: var(--font-med);
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    text-decoration: none;
 }
 
-.header-btn.scroll-btn a {
+.header-btn.scroll-btn {
     color: var(--black);
 }
 
-.header-btn.scroll-btn a:hover {
+.header-btn.scroll-btn:hover {
     background-color: rgba(0, 0, 0, 0.10);
     border-radius: 0.5rem;
 }
 
-.header-btn.login-btn a {
+.header-btn.login-btn {
     color: white;
     background-color: var(--light-purple);
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.header-btn.login-btn a:hover {
+.header-btn.login-btn:hover {
     color: black;
     background-color: rgba(140, 130, 236, 0.8);
     box-shadow: none;
