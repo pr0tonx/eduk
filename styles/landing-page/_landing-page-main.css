@@ -1,3 +1,14 @@
+@import '../_globals.css';
+@import '_header.css';
+@import '_landing-page-main.css';
+@import '_login-dialog.css';
+@import '_hero.css';
+@import '_benefits.css';
+@import '_resourses.css';
+@import '_testimonials.css';
+@import '_contact.css';
+@import '_footer.css';
+
 *, html {
     scroll-behavior: smooth;
 }
