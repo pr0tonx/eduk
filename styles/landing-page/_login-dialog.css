@@ -10,7 +10,7 @@
     width: 36.75rem;
     height: 32.375rem;
     top: 17.5%;
-    right: 30%;
+    /*right: 30%;*/
     flex-direction: column;
     /*background: linear-gradient(#F5F7F6 -35%, #3525D5 195%); !* FIXME *!*/
     background-color: #DDD;
