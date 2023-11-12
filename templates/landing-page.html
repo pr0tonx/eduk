@@ -11,7 +11,7 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles/_globals.css">
+    <link rel="stylesheet" href="../styles/landing-page/_landing-page-main.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -31,11 +31,65 @@
             <div class="header-btn scroll-btn"><a href="#" id="benefits-btn">Benefícios</a></div>
             <div class="header-btn scroll-btn"><a href="#" id="resources-btn">Funcionalidades</a></div>
             <div class="header-btn scroll-btn"><a href="#" id="contacts-btn">Contato</a></div>
-            <div class="header-btn login-btn"><a href="#">Acesso</a></div>
+            <div class="header-btn login-btn" id="login-btn"><a href="#">Acesso</a></div>
         </div>
     </div>
 </header>
 <!--    END HEADER SECTION-->
+
+
+<!--    START LOGIN DIALOG SECTION-->
+<div>
+    <div class="modal-container hidden" id="modal-container">
+        <span class="close-btn" id="close-btn">x</span>
+
+        <div class="modal-container-inner">
+            <div class="top logo flex-jc-c-ai-c">
+                <img src="../assets/logo.svg" alt="Logo Eduk" width="378">
+            </div>
+
+            <div class="middle-one login-form" id="middle-one">
+                <input class="login-form__email"
+                       type="email"
+                       placeholder="Email"
+                       required>
+
+                <input type="password"
+                       placeholder="Senha"
+                       required>
+
+                <div class="forgot-password" id="forgot-password">
+                    Esqueci minha senha
+                </div>
+            </div>
+
+            <div class="middle-two login-form hidden" id="middle-two">
+                <input placeholder="Email">
+            </div>
+
+            <div class="middle-three hidden" id="middle-three">
+                <span class="flex-jc-c-ai-c">Enviamos um link de recuperação de senha para seu email ;)</span>
+            </div>
+
+            <div class="bottom-one flex-jc-c-ai-c" id="bottom-one">
+                <button type="submit" id="login-submit">Acessar</button>
+            </div>
+
+            <div class="bottom-two hidden flex-jc-sa-ai-c" id="bottom-two">
+                <button id="fp-back-btn">Voltar</button>
+                <button type="submit" id="submit-fp-btn">Enviar</button>
+            </div>
+
+            <div class="bottom-three hidden flex-jc-c-ai-c" id="bottom-three">
+                <button id="fp-success-back-btn">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+</div>
+<!--    END LOGIN DIALOG SECTION-->
+
 
 
 <div class="body">
