@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@500&family=Rubik:wght@500&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/landing-page/_landing-page-main.css">
+
+    <link rel="stylesheet" href="../styles/_globals.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -24,37 +26,12 @@
             </a>
         </div>
 
-        <div class="btns-container flex-jc-sb-ai-c">
-            <div class="header-btn scroll-btn" id="home-btn">Home</div>
-            <div class="header-btn scroll-btn" id="benefits-btn">Benefícios</div>
-            <div class="header-btn scroll-btn" id="resources-btn">Funcionalidades</div>
-            <div class="header-btn scroll-btn" id="contacts-btn">Contato</div>
-            <div class="header-btn login-btn" id="login-btn">Acesso</div>
-
-            <div class="modal-container hidden" id="modal-container">
-                <div class="modal-container-inner">
-                    <div class="top flex-jc-sb-ai-c">
-                        <div class="flex-jc-c-ai-c">
-                            <span>Acesse sua conta</span>
-                        </div>
-                        <div class="modal-container-outer" id="close-btn">
-                            <span class="close-btn">x</span>
-                        </div>
-                    </div>
-                    <div class="login-form flex-jc-c-ai-c">
-                        <label>
-                            <input type="email" placeholder="seu-email@email.com" name="username">
-                        </label>
-                        <label>
-                            <input type="password" name="senha">
-                        </label>
-                    </div>
-                    <input type="email" placeholder="dhsaiudhsa@com.com" name="Digite seu email">
-                    <button type="submit" class="">Entrar</button>
-                </div>
-            </div>
-
-            <div class="overlay hidden"></div>
+        <div class="flex-jc-sb-ai-c">
+            <div class="header-btn scroll-btn"><a href="#" id="home-btn">Home</a></div>
+            <div class="header-btn scroll-btn"><a href="#" id="benefits-btn">Benefícios</a></div>
+            <div class="header-btn scroll-btn"><a href="#" id="resources-btn">Funcionalidades</a></div>
+            <div class="header-btn scroll-btn"><a href="#" id="contacts-btn">Contato</a></div>
+            <div class="header-btn login-btn"><a href="#">Acesso</a></div>
         </div>
     </div>
 </header>
@@ -266,16 +243,17 @@
 
 
 <!--    START FOOTER SECTION-->
-<footer class="flex-jc-c-ai-c">
-    <div class="social-media flex-jc-c-ai-c">
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-
-    <p class="copyright">&copy; 2023 Eduk</p>
-</footer>
+<footer class=" flex-jc-c-ai-c">
+        <div class="social-media flex-jc-c-ai-c">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div>
+            <p class="copyright">&copy; 2023 Eduk</p>
+        </div>
+    </footer>
 <!--   END FOOTER SECTION-->
 </body>
 

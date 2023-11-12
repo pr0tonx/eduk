@@ -1,9 +1,15 @@
 footer {
-     font-family: Montserrat, sans-serif;
-     background-color: var(--white);
-     color: var(--purple);
-     text-align: center;
-     padding: 1.5rem;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    background-color: var(--white);
+    color: var(--purple);
+    text-align: center;
+    padding: 1.5rem;
+    /* position: sticky; */
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Evita que o padding afete a altura total */
+    box-shadow: 0 1.25rem 0.625rem -1.25rem rgba(0,0,0,0.45) inset;
 }
 
 .social-media {
@@ -13,7 +19,6 @@ footer {
 .social-media a {
     color: var(--black);
     margin: 0 0.625rem;
-
 }
 
 .social-media a:hover {
@@ -21,6 +26,6 @@ footer {
     color: var(--purple);
 }
 
-.copyright{
+.copyright {
     padding-top: 0.813rem;
 }
