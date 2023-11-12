@@ -1,0 +1,77 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.modal-container {
+    width: 24rem;
+    /*height: 20rem;*/
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    flex-direction: column;
+    background: linear-gradient(#F5F7F6 -35%, #3525D5 195%); /* FIXME */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.15);
+    z-index: 3;
+    animation: appear 350ms ease-in 1;
+}
+
+.modal-container-inner {
+    margin: 1.5rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 1.275rem;
+    padding: 0.25rem 0.25rem 0 0;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    /*font-size: 2rem;*/
+    color: #000000B3;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/*.close-btn:hover {*/
+/*    background-color: rgba(0, 0, 0, 0.10);*/
+/*    border-radius: 0.5rem;*/
+/*}*/
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.modal-container p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,12 +1,4 @@
 @import '_variables.css';
-@import '_header.css';
-@import 'landing-page/_landing-page-main.css';
-@import 'landing-page/_hero.css';
-@import 'landing-page/_benefits.css';
-@import 'landing-page/_resourses.css';
-@import 'landing-page/_testimonials.css';
-@import 'landing-page/_contact.css';
-@import '_footer.css';
 
 *, html {
     padding: 0;
