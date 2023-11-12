@@ -1,3 +1,5 @@
+<?php require 'conexao.php';?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@500&family=Rubik:wght@500&display=swap"
           rel="stylesheet">
+  
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../styles/landing-page/_landing-page-main.css">
@@ -40,6 +43,7 @@
 
 <!--    START LOGIN DIALOG SECTION-->
 <div class="flex-jc-c-ai-c">
+          <form name="login-pessoa" class="form" method="post" action="processa-login.php">
     <div class="modal-container hidden" id="modal-container">
         <span class="close-btn" id="close-btn">x</span>
 
@@ -85,6 +89,7 @@
             </div>
         </div>
     </div>
+            </form>
 
     <div class="overlay hidden"></div>
 </div>
@@ -309,6 +314,7 @@
         </div>
     </footer>
 <!--   END FOOTER SECTION-->
+
 </body>
 
 <script src="../scripts/landing-page.js"></script>
