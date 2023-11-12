@@ -1,3 +1,4 @@
+<?php require 'conexao.php';?>
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +39,7 @@
     <div class="form_container flex-jc-c-ai-c">
 
         <h2>Cadastro Pessoa</h2>
-        <form name="formCadPessoa" class="form" method="post" action="processaCadastro.php" onsubmit="return validarFormulario()">
+        <form name="formCadPessoa" class="form" method="post" action="processa-cadastro.php" onsubmit="return validarFormulario()">
             <div class="form_field flex-jc-c-ai-c">
                 <label for="nome" class="">Nome</label>
                 <input type="text" class="form_input" name="nome" id="nome" placeholder="Digite seu nome completo" required pattern="^[a-zA-Z]+(\s[a-zA-Z]+)+$">
