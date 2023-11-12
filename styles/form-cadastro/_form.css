@@ -45,7 +45,7 @@ textarea::placeholder {
     margin-top: 0.625rem;
     flex-direction: column;
     width: 56.25rem;
-    margin: auto;
+    margin: 2rem 0;
     background: var(--white);
     border-radius: 0.188rem;
     padding: 2rem;

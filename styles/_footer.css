@@ -5,7 +5,7 @@ footer {
     color: var(--purple);
     text-align: center;
     padding: 1.5rem;
-    position: sticky;
+    /* position: sticky; */
     bottom: 0;
     width: 100%;
     box-sizing: border-box; /* Evita que o padding afete a altura total */

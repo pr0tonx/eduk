@@ -50,7 +50,7 @@
 
             <div class="form_field flex-jc-c-ai-c">
                 <label for="dataNascimento">Data de Nascimento</label>
-                <input type="date" class="form_input" name="dataNascimento" id="dataNascimento" required>
+                <input type="date" class="form_input" name="dataNascimento" id="dataNascimento"  placeholder="DD/MM/AAAA" required>
             </div>
 
             <div class="form_field flex-jc-c-ai-c">
