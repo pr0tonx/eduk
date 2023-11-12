@@ -43,6 +43,8 @@ contactsBtn.addEventListener('click', () => {
 });
 
 openModalBtn.addEventListener('click', () => {
+    window.scrollTo({behavior: 'smooth', top: 0});
+
     modalContainer.classList.remove('hidden');
     overlay.classList.remove('hidden');
 

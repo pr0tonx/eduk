@@ -1,91 +1,99 @@
-body {
-    background-image: url("../../assets/hero-background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@import '../_globals.css';
+@import '../_variables.css';
 
+body {
+    box-sizing: border-box;
 }
 
-input::placeholder,
-textarea::placeholder {
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    padding: 0.5rem 1.125rem;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.logo {
+    padding: 0.5rem;
+}
+
+.main-container {
+    background: linear-gradient(#F5F7F6 -35%, #3525D5 195%); /* FIXME */
+}
+
+.register-form {
+    width: 43rem;
+    background-color: white;
+    padding: 0 4rem 2rem 4rem;
+    margin: 4rem;
+    border-radius: 0.5rem;
+}
+
+.register-form h2 {
+    color: var(--purple);
+    padding: 0.625rem;
+    margin: 1rem;
+}
+
+.register-form-field {
+    flex-direction: column;
+    width: 45%;
+    font-family: Inter, sans-serif;
+    margin: 0 0 1.5rem 0;
+}
+
+.register-form-field-two {
+    flex-direction: column;
+    width: 28%;
+    font-family: Inter, sans-serif;
+    margin: 0 0 1.5rem 0;
+}
+
+.register-form-field input::placeholder,
+.register-form-field textarea::placeholder,
+.register-form-field-two input::placeholder,
+.register-form-field-two textarea::placeholder {
     color: lightgray;
     content: attr(placeholder);
-
 }
 
-
-.form_container h2 {
-    color: var(--light-purple);
-    border-bottom: 0.063rem var(--purple) solid;
-    margin-bottom: 0.938rem;
-    padding-bottom: 0.625rem;
-    width: fit-content;
-    text-align: center;
+select, option {
+    font-family: Inter, sans-serif;
 }
 
-
-.form {
-    min-width: 43.75rem;
-}
-
-.form_input {
+.register-form-input {
+    font-family: Inter, sans-serif;
     font-size: var(--font-normal);
     padding: 0.5rem 0.938rem;
     border-radius: 0.25rem;
-    border: 0.063rem #f2f2f2 solid;
-    background: #fdfdfd;
+    border: 0.063rem #F2F2F2 solid;
+    background: #FDFDFD;
     outline: none;
+}
+
+.register-form-label {
     width: 100%;
-    transition: all 0.3s;
-
-}
-
-.form_container {
-    font-family: Heebo, sans-serif;
-    margin-top: 0.625rem;
-    flex-direction: column;
-    width: 56.25rem;
-    margin: 2rem 0;
-    background: var(--white);
-    border-radius: 0.188rem;
-    padding: 2rem;
-    padding-bottom: 6rem; /* Adicione este valor para garantir espaço para o footer */
-    height: 100%;
-    box-sizing: border-box; /* Evita que o padding afete a altura total */
-}
-
-.form_field {
-    flex-direction: column;
-    max-width: fit-content;
-    min-width: 28.125rem;
-    margin: 0 auto;
-    margin-bottom: 0.750rem;
-    position: relative;
-    padding-top: 0.188rem;
-}
-
-.form_label {
-    float: left;
-    width: 100%;
-    padding-left: 30px;
-    cursor: pointer;
-    margin-bottom: 8px;
-}
-
-.submit_button {
-    font-size: var(--font-normal);
-    background-color:var(--white);
-    color: var(--light-purple);
-    border: 0.125rem solid var(--light-purple);
-    padding: 0.625rem;
-    border-radius: 10px;
+    padding: 0 0.5rem 0.25rem 0;
     cursor: pointer;
 }
 
-.submit_button:hover {
+.register-submit-button {
+    color: #FFFFFF;
+    background-color: #6356E5;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.register-submit-button:hover {
     opacity: 0.8;
-    background-color:var(--light-purple);
-    color: var(--white);
+}
 
-
+.register-submit-button button:active {
+    transform: translateY(0.063rem);
 }

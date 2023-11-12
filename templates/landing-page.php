@@ -39,7 +39,7 @@
 
 
 <!--    START LOGIN DIALOG SECTION-->
-<div>
+<div class="flex-jc-c-ai-c">
     <div class="modal-container hidden" id="modal-container">
         <span class="close-btn" id="close-btn">x</span>
 
