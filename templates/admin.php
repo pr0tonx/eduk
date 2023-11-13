@@ -78,7 +78,7 @@ $result = $conn->query($sql);
                             <td><?php echo $pessoa['cidade'] ?></td>
                             <td><?php echo $pessoa['estado'] ?></td>
                             <td><?php echo $pessoa['pais'] ?></td>
-                            <td><button><i class="fa-solid fa-pen-to-square"></i></button></td>
+                            <td><a href="cadastro-pessoa.php?id= <?php echo $pessoa['id'] ?>"><button><i class="fa-solid fa-pen-to-square"></i></button></a></td>
                             <td><a href="delete-cadastro.php?id= <?php echo $pessoa['id'] ?>"><button><i class="fa-solid fa-trash"></i></button></a></td>
                         </tr>
                     <?php
