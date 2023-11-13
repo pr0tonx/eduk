@@ -1,7 +1,4 @@
-<?php include('conexao.php');
-
-session_start();
-?>
+<?php include('conexao.php');   ?>
 
 <!doctype html>
 <html lang="en">
@@ -41,6 +38,29 @@ session_start();
         </div>
     </header>
     <!--    END HEADER SECTION-->
+
+
+<!--    START TOAST SECTION -->
+    <?php
+    session_start();
+    if ($_SESSION && $_SESSION['authLoginError']):
+    ?>
+    <div class="toast-wrapper" id="toast">
+        <div class="toast error">
+            <div class="toast-outer-container">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="toast-inner-container">
+                <p>Credenciais inválidas</p>
+            </div>
+        </div>
+    </div>
+    <?php
+    unset($_SESSION['authLoginError']);
+    endif;
+    ?>
+
+<!-- END TOAST SECTION-->
 
 
     <!--    START LOGIN DIALOG SECTION-->
