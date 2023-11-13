@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET)) {
          header('location: admin.php');
        
          // UPDATE TELEFONE
-         $conn->query("UPDATE tbtelefone SET numero = '$numero', tipo = 'móvel'WHERE fk_pessoa_id = '$id'");
+         $conn->query("UPDATE tbtelefone SET numero = '$telefone', tipo = 'móvel'WHERE fk_pessoa_id = '$id'");
 
     } else {
         $_SESSION['mensagem'] = "Erro executando INSERT: " . $conn->error . " Tente novo cadastro.";
