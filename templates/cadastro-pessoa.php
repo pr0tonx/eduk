@@ -154,6 +154,8 @@ if (!empty($_GET)) {
                 </div>
             </div>
 
+            
+
             <div class="flex-jc-c-ai-c">
                 <a href="/painel-do-aluno.php">
                     <button class="register-submit-button" type="submit" value="Enviar">Enviar</button>

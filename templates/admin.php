@@ -27,9 +27,9 @@ $result = $conn->query($sql);
 <body>
     <div class="admin-container">
         <div class="top">
-            <button>
-                <i class="fa-solid fa-plus"></i>
-            </button>
+            <a href="cadastro-credenciais-pessoa.php">
+                <button class="fa-solid fa-plus"></button>
+            <</a>
         </div>
         <div>
             <table class="table-container">
