@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET)) {
         $conn->query("INSERT INTO tbendereco_pessoa (rua, numero, bairro, complemento, cep, cidade, estado, pais, fk_pessoa_id) VALUES ('$rua', '$numero', '$bairro',
                                 '$complemento', '$cep', '$cidade', '$estado', '$pais', '$id')");
         // QUERY E INSERCAO TELEFONE
-        $conn->query("INSERT INTO tbtelefone (numero, tipo, fk_pessoa_id) VALUES ('$telefone', 'celular', '$id')");
+        $conn->query("INSERT INTO tbtelefone (numero, tipo, fk_pessoa_id) VALUES ('$telefone', 'móvel', '$id')");
 
         $_SESSION['mensagem'] = "Cadastro efetuado com sucesso. Você já pode acessar as funcionalides do site!";
         header('location: landing-page.php');

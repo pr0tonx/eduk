@@ -1,7 +1,13 @@
 <?php
 require 'conexao.php';
 
-$sql = "SELECT p.*, e.*, t.* FROM tbpessoa AS p, tbendereco_pessoa AS e, tbtelefone AS t WHERE p.id = e.fk_pessoa_id and p.id = t.fk_pessoa_id";
+$sql = "SELECT p.id, p.nome, p.sobrenome, p.email, p.cpf, p.rg, p.data_nascimento, 
+               p.sexo, p.nacionalidade, t.numero as telefone, e.rua, e.numero, e.complemento,
+               e.bairro, e.cep, e.cidade, e.estado, e.pais
+        FROM tbpessoa AS p
+        INNER JOIN tbendereco_pessoa AS e ON p.id = e.fk_pessoa_id
+        INNER JOIN tbtelefone AS t ON p.id = t.fk_pessoa_id";
+
 $result = $conn->query($sql);
 ?>
 
@@ -14,7 +20,6 @@ $result = $conn->query($sql);
     <title>Eduk Admin</title>
 
     <link rel="stylesheet" href="../styles/admin/_admin.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -56,7 +61,7 @@ $result = $conn->query($sql);
                     ?>
                         <tr class="table-row">
                             <td><?php echo $pessoa['id'] ?></td>
-                            <td><?php echo $pessoa['nome']?>  <?php echo $pessoa['sobrenome'] ?></td> <!-- +sobrenome -->
+                            <td><?php echo $pessoa['nome'] ?> <?php echo $pessoa['sobrenome'] ?></td> <!-- +sobrenome -->
                             <td><?php echo $pessoa['email'] ?></td>
                             <td><?php echo $pessoa['cpf'] ?></td>
                             <td><?php echo $pessoa['rg'] ?></td>

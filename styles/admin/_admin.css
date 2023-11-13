@@ -1,0 +1,53 @@
+@import '../_globals.css';
+@import '../_variables.css';
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.admin-container {
+
+}
+
+.top {
+    width: 100%;
+    background-color: var(--light-grey);
+}
+
+.admin-container button {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    margin: 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.admin-container button:hover {
+    opacity: 0.8;
+    border-radius: 0.5rem;
+}
+
+.admin-container button:active {
+    transform: translateY(0.063rem);
+}
+
+.table-container {
+    width: 100%;
+    border-spacing: 0.125rem;
+}
+
+.table-container th {
+    padding: 0.75rem 0;
+    text-align: left;
+    background-color: var(--light-grey);
+    color: black;
+}
+
+.table-container tbody tr:nth-child(odd) {
+    background-color: var(--greyish-white);
+}
+
+.table-container tbody tr:hover {
+    opacity: 0.8;
+}
