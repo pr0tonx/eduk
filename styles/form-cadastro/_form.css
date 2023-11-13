@@ -35,6 +35,15 @@ header {
     padding: 0.625rem;
     margin: 1rem;
 }
+.register-form span{
+    font-size: var(--font-lg);
+    font-family: Inter, sans-serif;
+    color: var(--black);
+    padding: 0.625rem;
+    margin: 1rem;
+    display: flex;
+    border-bottom: 1px var(--purple) solid;
+}
 
 .register-form-field {
     flex-direction: column;
@@ -97,3 +106,4 @@ select, option {
 .register-submit-button button:active {
     transform: translateY(0.063rem);
 }
+
