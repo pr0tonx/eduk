@@ -26,18 +26,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET)) {
     $pais = $conn->real_escape_string($_POST["pais"]);
     $complemento = $conn->real_escape_string($_POST["complemento"]);
 
-
+    // QUERY PESSOA
     $sql = " UPDATE tbpessoa 
     SET nome = '$nome', sobrenome = '$sobrenome', cpf = '$cpf', data_nascimento = '$dataNascimento', rg = '$rg', sexo = '$sexo', nacionalidade = '$nacionalidade'
     WHERE id = '$id'";
 
-
+    // INSERT PESSOA
     if ($result = $conn->query($sql)) {
 
-        $insereEndereco = "INSERT INTO tbendereco_pessoa (rua, numero, bairro, complemento, cep, cidade, estado, pais, fk_pessoa_id) VALUES ('$rua', '$numero', '$bairro',
-                            '$complemento', '$cep', '$cidade', '$estado', '$pais', '$id')";
-        
-        $result2 = $conn->query($insereEndereco);
+        // QUERY E INSERCAO ENDERECO
+        $conn->query("INSERT INTO tbendereco_pessoa (rua, numero, bairro, complemento, cep, cidade, estado, pais, fk_pessoa_id) VALUES ('$rua', '$numero', '$bairro',
+                                '$complemento', '$cep', '$cidade', '$estado', '$pais', '$id')");
+        // QUERY E INSERCAO TELEFONE
+        $conn->query("INSERT INTO tbtelefone (numero, tipo, fk_pessoa_id) VALUES ('$telefone', 'celular', '$id')");
 
         $_SESSION['mensagem'] = "Cadastro efetuado com sucesso. Você já pode acessar as funcionalides do site!";
         header('location: landing-page.php');

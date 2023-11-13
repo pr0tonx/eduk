@@ -272,7 +272,7 @@ CREATE TABLE `tbresponsavel` (
 --
 
 CREATE TABLE `tbtelefone` (
-  `numero` char(11) NOT NULL,
+  `numero` varchar(15) NOT NULL,
   `tipo` enum('residencial','fixo','móvel') NOT NULL,
   `fk_pessoa_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
