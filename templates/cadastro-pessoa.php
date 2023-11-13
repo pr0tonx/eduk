@@ -2,11 +2,11 @@
 require "conexao.php";
 if (!empty($_GET)) {
     $id = $_GET['id'];
-    $result = $conn->query("SELECT email, senha, nome FROM tbpessoa WHERE id = '$id'");
+    $result = $conn->query("SELECT email, nome FROM tbpessoa WHERE id = '$id'");
     $usuario = mysqli_fetch_assoc($result);
     $email = $usuario['email'];
 
-    if($usuario['nome']!=null){
+    if(isset($usuario['nome'])){
        $queryEdit =  $conn->query(
         "SELECT p.id, p.nome, p.sobrenome, p.email, p.cpf, p.rg, p.data_nascimento, 
                p.sexo, p.nacionalidade, t.numero as telefone, e.rua, e.numero, e.complemento,
@@ -54,12 +54,12 @@ if (!empty($_GET)) {
             <div class="flex-jc-sb-ai-c">
                 <div class="register-form-field flex">
                     <label class="register-form-label" for="nome">Nome</label>
-                    <input type="text" class="register-form-input" name="nome" id="nome" placeholder="Digite seu nome" value="<?php if(isset($usuarioEdit['nome'])){echo $usuarioEdit['nome'];} ?>" required pattern="^[a-zA-Z]+(\s[a-zA-Z]+)+$">
+                    <input type="text" class="register-form-input" name="nome" id="nome" placeholder="Digite seu nome" value="<?php if(isset($usuarioEdit['nome'])){echo $usuarioEdit['nome'];} ?>" required pattern="^[a-zA-Z]{2,}(?: [a-zA-Z]{2,})*$">
                 </div>
 
                 <div class="register-form-field flex">
                     <label class="register-form-label" for="sobrenome">Sobrenome</label>
-                    <input type="text" class="register-form-input" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" value="<?php if(isset($usuarioEdit['sobrenome'])){echo $usuarioEdit['sobrenome'];} ?>" required pattern="^[a-zA-Z]+(\s[a-zA-Z]+)+$">
+                    <input type="text" class="register-form-input" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" value="<?php if(isset($usuarioEdit['sobrenome'])){echo $usuarioEdit['sobrenome'];} ?>" required pattern="^[a-zA-Z]{2,}(?: [a-zA-Z]{2,})*$">
                 </div>
             </div>
 
@@ -154,7 +154,7 @@ if (!empty($_GET)) {
                 </div>
             </div>
 
-            
+
 
             <div class="flex-jc-c-ai-c">
                 <a href="/painel-do-aluno.php">
