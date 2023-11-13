@@ -1,5 +1,6 @@
 <?php
-require 'conexao.php';
+session_start();
+include('conexao.php');
 
 $sql = "SELECT p.id, p.nome, p.sobrenome, p.email, p.cpf, p.rg, p.data_nascimento, 
                p.sexo, p.nacionalidade, t.numero as telefone, e.rua, e.numero, e.complemento,
@@ -78,7 +79,7 @@ $result = $conn->query($sql);
                             <td><?php echo $pessoa['estado'] ?></td>
                             <td><?php echo $pessoa['pais'] ?></td>
                             <td><button><i class="fa-solid fa-pen-to-square"></i></button></td>
-                            <td><button><i class="fa-solid fa-trash"></i></button></td>
+                            <td><a href="delete-cadastro.php?id= <?php echo $pessoa['id'] ?>"><button><i class="fa-solid fa-trash"></i></button></a></td>
                         </tr>
                     <?php
                     endwhile;
