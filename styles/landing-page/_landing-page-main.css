@@ -8,6 +8,7 @@
 @import '_testimonials.css';
 @import '_contact.css';
 @import '_footer.css';
+@import '../_toast.css';
 
 *, html {
     scroll-behavior: smooth;

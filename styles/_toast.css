@@ -1,7 +1,4 @@
-/*
-Código para ser utilizado no toast
- */
-
+/* Código para ser utilizado no toast */
 /*
 <div class="toast-wrapper" id="toast">
     <div class="toast success">
@@ -45,9 +42,7 @@ Código para ser utilizado no toast
         <button>&times;</button>
     </div>
 </div>
-
  */
-
 
 @keyframes timeToVanish {
     0% {
