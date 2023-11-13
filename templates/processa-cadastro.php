@@ -38,20 +38,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET)) {
 
     // INSERT PESSOA, ENDERECO E TELEFONE CASO PRIMEIRO CADASTRO
     if ($result = $conn->query($sql) && $verificao==0) {
+        // QUERY E INSERCAO TELEFONE
+        $conn->query("INSERT INTO tbtelefone (numero, tipo, fk_pessoa_id) VALUES ('$telefone', 'móvel', '$id')");
         // QUERY E INSERCAO ENDERECO
         $conn->query("INSERT INTO tbendereco_pessoa (rua, numero, bairro, complemento, cep, cidade, estado, pais, fk_pessoa_id) VALUES ('$rua', '$numero', '$bairro',
                                 '$complemento', '$cep', '$cidade', '$estado', '$pais', '$id')");
-        // QUERY E INSERCAO TELEFONE
-        $conn->query("INSERT INTO tbtelefone (numero, tipo, fk_pessoa_id) VALUES ('$telefone', 'móvel', '$id')");
+        
 
         $_SESSION['mensagem'] = "Cadastro efetuado com sucesso. Você já pode acessar as funcionalides do site!";
         header('location: landing-page.php');
         exit();
     }else if($result = $conn->query($sql) && $verificao>0){
-        // UPDATE ENDERECO E PESSOA
+        // UPDATE ENDERECO
         $conn->query("UPDATE tbendereco_pessoa SET rua = '$rua', numero = '$numero', bairro = '$bairro', complemento= '$complemento', cep= '$cep', 
-        cidade= '$cidade', estado= '$estado', pais= '$pais' WHERE fk_pessoa_id = '$id'");
+        cidade= '$cidade', estado= '$estado', pais= '$pais' WHERE fk_pessoa_id = '$id';");
          header('location: admin.php');
+       
+         // UPDATE TELEFONE
+         $conn->query("UPDATE tbtelefone SET numero = '$numero', tipo = 'móvel'WHERE fk_pessoa_id = '$id'");
 
     } else {
         $_SESSION['mensagem'] = "Erro executando INSERT: " . $conn->error . " Tente novo cadastro.";
