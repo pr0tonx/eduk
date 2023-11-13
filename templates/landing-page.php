@@ -1,4 +1,7 @@
-<?php require 'conexao.php'; ?>
+<?php include('conexao.php');
+
+session_start();
+?>
 
 <!doctype html>
 <html lang="en">
