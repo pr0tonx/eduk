@@ -8,12 +8,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
     $senha = $conn->real_escape_string($_POST['senha']);
     $senha = md5($senha);
 
-    $sql = "SELECT id, nome FROM tbpessoa where email = '$email' and senha = '$senha' ";
+    $sql = "SELECT id, nome, email, senha FROM tbpessoa where email = '$email' and senha = '$senha' ";
     $result = $conn->query($sql);
     $pessoa = mysqli_fetch_assoc($result);
     if(mysqli_num_rows($result) == 1 && $pessoa['nome']== null){
-        $pegaResult = mysqli_fetch_assoc($result);
-        $id = $pegaResult['id'];
+        $id = $pessoa['id'];
         $url = 'cadastro-pessoa.php?id=' . $id;
         header('location: '. $url);
         exit();
@@ -22,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
     }else{
         $_SESSION['authLoginError'] = 'Credenciais invalidas!';
 
-        header('location: landing-page.php');
+       header('location: landing-page.php');
         exit();
     }
 }

@@ -30,10 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET)) {
     $sql = " UPDATE tbpessoa 
     SET nome = '$nome', sobrenome = '$sobrenome', cpf = '$cpf', data_nascimento = '$dataNascimento', rg = '$rg', sexo = '$sexo', nacionalidade = '$nacionalidade'
     WHERE id = '$id'";
+    
+    $sql2 = "SELECT * FROM tbendereco_pessoa as e, tbtelefone as t WHERE t.fk_pessoa_id = '$id' and e.fk_pessoa_id = '$id'";
+    $execution2 = $conn->query($sql2);
 
-    // INSERT PESSOA
-    if ($result = $conn->query($sql)) {
+    $verificao = mysqli_num_rows($execution2);
 
+    // INSERT PESSOA, ENDERECO E TELEFONE CASO PRIMEIRO CADASTRO
+    if ($result = $conn->query($sql) && $verificao==0) {
         // QUERY E INSERCAO ENDERECO
         $conn->query("INSERT INTO tbendereco_pessoa (rua, numero, bairro, complemento, cep, cidade, estado, pais, fk_pessoa_id) VALUES ('$rua', '$numero', '$bairro',
                                 '$complemento', '$cep', '$cidade', '$estado', '$pais', '$id')");
@@ -43,9 +47,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_GET)) {
         $_SESSION['mensagem'] = "Cadastro efetuado com sucesso. Você já pode acessar as funcionalides do site!";
         header('location: landing-page.php');
         exit();
+    }else if($result = $conn->query($sql) && $verificao>0){
+        // UPDATE ENDERECO E PESSOA
+        $conn->query("UPDATE tbendereco_pessoa SET rua = '$rua', numero = '$numero', bairro = '$bairro', complemento= '$complemento', cep= '$cep', 
+        cidade= '$cidade', estado= '$estado', pais= '$pais' WHERE fk_pessoa_id = '$id'");
+         header('location: admin.php');
+
     } else {
         $_SESSION['mensagem'] = "Erro executando INSERT: " . $conn->error . " Tente novo cadastro.";
-        header('location: landing-page.php');
+        header('location: admin.php');
         exit();
     }
 }
