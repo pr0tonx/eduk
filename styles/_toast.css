@@ -49,6 +49,10 @@
         opacity: 1;
     }
 
+    75% {
+        opacity: 1;
+    }
+
     100% {
         display: none;
         opacity: 0;
@@ -57,16 +61,16 @@
 
 #toast {
     animation-name: timeToVanish;
-    animation-duration: 5000ms;
+    animation-duration: 3500ms;
     animation-fill-mode: forwards;
 }
 
 .toast-wrapper {
     width: 380px;
-    position: relative;
+    position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    bottom: 20%;
+    left: 83%;
     font-family: 'Inter', sans-serif;
 }
 
