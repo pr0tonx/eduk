@@ -22,6 +22,12 @@ header {
     background: linear-gradient(#F5F7F6 -35%, #3525D5 195%); /* FIXME */
 }
 
+.main-container-cad-inicial{
+    height: 100vh;
+    background: no-repeat linear-gradient(#F5F7F6 -35%, #3525D5 195%);
+    /* FIXME */
+}
+
 .register-form {
     width: 43rem;
     background-color: white;
@@ -106,4 +112,5 @@ select, option {
 .register-submit-button button:active {
     transform: translateY(0.063rem);
 }
+
 
