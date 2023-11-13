@@ -17,6 +17,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST" ){
         exit();
     }else if(mysqli_num_rows($result) == 1 && $pessoa['nome']!== null){
         header('location: painel-aluno.php');
+    }else{
+        $_SESSION['mensagem'] = 'Credenciais invalidas!';
+        header('location'. 'landing-page.php');
     }
 }
 ?>
