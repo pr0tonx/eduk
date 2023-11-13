@@ -145,7 +145,7 @@ if (!empty($_GET)) {
 
                 <div class="register-form-field-two flex">
                     <label class="register-form-label" for="estado">Estado</label>
-                    <input class="register-form-input" type="text" name="estado" id="estado" placeholder="SP" value="<?php if(isset($usuarioEdit['estado'])){echo $usuarioEdit['estado'];} ?>" required>
+                    <input class="register-form-input" type="text" name="estado" id="estado" placeholder="SP" value="<?php if(isset($usuarioEdit['estado'])){echo $usuarioEdit['estado'];} ?>" maxlength="2" required>
                 </div>
 
                 <div class="register-form-field-two flex">
