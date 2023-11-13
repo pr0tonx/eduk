@@ -67,4 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Aplicar máscara durante a digitação para CEP
     const cepInput = document.getElementById("cep");
     aplicarMascara(cepInput,"99999-999");
+
+    // Aplicar máscara durante a digitação da Data de Nascimento
+    const dataInput = document.getElementById("dataNascimento");
+    aplicarMascara(dataInput,"99/99/9999");
 });
